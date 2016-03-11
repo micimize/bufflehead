@@ -1,0 +1,25 @@
+{
+  "name": "soil_reactuate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-simple-webpacker --server ./src/server.js --out ./build/server.js",
+    "dock": "npm rebuild; npm start",
+    "dist": "node-simple-webpacker --task dist --server ./src/server.js --out ./dist/server.js",
+    "deploy": "npm run dist; forever start ./dist/server.js",
+    "build": "NODE_ENV=production webpack --config node_modules/reactuate/default-webpack-config.js --progress --colors"
+  },
+  "author": "Michael Joseph Rosenthal",
+  "license": "ISC",
+  "dependencies": {
+    "express-domain-driver": "github:michaeljosephrosenthal/express-domain-driver",
+    "redux-react-domain-driver": "github:michaeljosephrosenthal/redux-react-domain-driver",
+    "pouchdb-fullstack-store": "github:michaeljosephrosenthal/pouchdb-fullstack-store",
+    "strictduck": "github:strictduck/strictduck"
+  },
+  "devDependencies": {
+    "node-simple-webpacker": "github:michaeljosephrosenthal/node-simple-webpacker"
+  }
+}
