@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/index.js?9552"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;6CACS;;;;;;;;;;SADF,qD","file":"0.7a4d51883d6adb1f0d44.hot-update.js","sourcesContent":["export default from './DomainDrivenFullstackApplication'\nexport { Domain } from 'strictduck-domain-driven-fullstack'\n\n\n\n/** WEBPACK FOOTER **\n ** ./src/index.js\n **/"],"sourceRoot":""}
