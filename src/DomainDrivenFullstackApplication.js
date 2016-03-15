@@ -1,4 +1,3 @@
-import { compose } from 'strictduck'
 import { fullstack } from 'strictduck-domain-driven-fullstack'
 import DDExpress from 'express-domain-driver'
 import DDReduxReact from 'redux-react-domain-driver'
@@ -12,6 +11,6 @@ export default fullstack.implement({
         //Store=DDPouchDb,
         Domains
     }){
-        super( Domains, Server, Client, /*Store,*/ )
+        return [ Domains, Server, Client /*Store,*/ ]
     }
 })
