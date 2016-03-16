@@ -1,16 +1,16 @@
-import { fullstack } from 'strictduck-domain-driven-fullstack'
+import Fullstack from 'strictduck-domain-driven-fullstack'
 import DDExpress from 'express-domain-driver'
-import DDReduxReact from 'redux-react-domain-driver'
+import DDReduxReact from 'domain-driven-redux-react'
 //import DDPouchDb from 'pouchdb-fullstack-store'
 
-export default fullstack.implement({
-    name: 'Bufflehead',
+export default class Bufflehead extends Fullstack {
     constructor({
-        Server=DDExpress,
-        Client=DDReduxReact,
+        server=DDExpress,
+        client=DDReduxReact,
         //Store=DDPouchDb,
-        Domains
+        domains
     }){
-        return [ Domains, Server, Client /*Store,*/ ]
+        console.log({ domains, server, client /*Store,*/ })
+        super({ domains, server, client /*Store,*/ })
     }
-})
+}

@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "express-domain-driver": "github:michaeljosephrosenthal/express-domain-driver",
-    "redux-react-domain-driver": "github:michaeljosephrosenthal/redux-react-domain-driver",
+    "domain-driven-redux-react": "github:michaeljosephrosenthal/redux-react-domain-driver",
     "pouchdb-fullstack-store": "github:michaeljosephrosenthal/pouchdb-fullstack-store",
     "strictduck-domain-driven-fullstack": "github:strictduck/domain-driven-fullstack",
     "strictduck": "github:strictduck/strictduck"
