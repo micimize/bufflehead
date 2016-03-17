@@ -17,7 +17,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3591e7fc0f273a1cb0ab"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "fb2de9dee7878d8d02be"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -652,9 +652,9 @@ module.exports =
 	
 	var _strictduckDomainDrivenFullstack2 = _interopRequireDefault(_strictduckDomainDrivenFullstack);
 	
-	var _expressDomainDriver = __webpack_require__(6);
+	var _domainDrivenExpress = __webpack_require__(6);
 	
-	var _expressDomainDriver2 = _interopRequireDefault(_expressDomainDriver);
+	var _domainDrivenExpress2 = _interopRequireDefault(_domainDrivenExpress);
 	
 	var _domainDrivenReduxReact = __webpack_require__(7);
 	
@@ -675,7 +675,7 @@ module.exports =
 	
 	    function Bufflehead(_ref) {
 	        var _ref$server = _ref.server;
-	        var server = _ref$server === undefined ? _expressDomainDriver2.default : _ref$server;
+	        var server = _ref$server === undefined ? _domainDrivenExpress2.default : _ref$server;
 	        var _ref$client = _ref.client;
 	        var client = _ref$client === undefined ? _domainDrivenReduxReact2.default : _ref$client;
 	        var
@@ -684,7 +684,6 @@ module.exports =
 	
 	        _classCallCheck(this, Bufflehead);
 	
-	        console.log({ domains: domains, server: server, client: client /*Store,*/ });
 	        return _possibleConstructorReturn(this, Object.getPrototypeOf(Bufflehead).call(this, { domains: domains, server: server, client: client /*Store,*/ }));
 	    }
 	
@@ -703,7 +702,7 @@ module.exports =
 /* 6 */
 /***/ function(module, exports) {
 
-	module.exports = require("express-domain-driver");
+	module.exports = require("domain-driven-express");
 
 /***/ },
 /* 7 */

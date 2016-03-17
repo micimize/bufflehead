@@ -12,7 +12,7 @@
   "author": "Michael Joseph Rosenthal",
   "license": "ISC",
   "dependencies": {
-    "express-domain-driver": "github:michaeljosephrosenthal/express-domain-driver",
+    "domain-driven-express": "github:michaeljosephrosenthal/express-domain-driver",
     "domain-driven-redux-react": "github:michaeljosephrosenthal/redux-react-domain-driver",
     "pouchdb-fullstack-store": "github:michaeljosephrosenthal/pouchdb-fullstack-store",
     "strictduck-domain-driven-fullstack": "github:strictduck/domain-driven-fullstack",
