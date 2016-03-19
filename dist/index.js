@@ -17,7 +17,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "fb2de9dee7878d8d02be"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3521d5e8dedc87e613c8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -634,8 +634,8 @@ module.exports =
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _DomainDrivenFullstackApplication2.default;
-	
 	var implementation = _strictduckDomainDrivenFullstack.Domain.implementation;
+	var Domains = _strictduckDomainDrivenFullstack.Domain.Domains;
 	exports.Domain = implementation;
 
 /***/ },
