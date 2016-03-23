@@ -1,7 +1,6 @@
 import Fullstack from 'strictduck-domain-driven-fullstack'
-import DDExpress from 'domain-driven-express'
-import DDReduxReact from 'domain-driven-redux-react'
-//import DDPouchDb from 'pouchdb-fullstack-store'
+const DDExpress = ($ES.CONTEXT == 'NODE' ? require('domain-driven-express/node') : require('domain-driven-express/browser')).default
+const DDReduxReact = ($ES.CONTEXT == 'NODE' ? require('domain-driven-redux-react/node') : require('domain-driven-redux-react/browser')).default
 
 export default class Bufflehead extends Fullstack {
     constructor({

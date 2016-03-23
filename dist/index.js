@@ -1,3 +1,4 @@
+require("source-map-support").install();
 module.exports =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	function hotDownloadUpdateChunk(chunkId) { // eslint-disable-line no-unused-vars
@@ -17,7 +18,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3521d5e8dedc87e613c8"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f15df6c76612044e088a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -623,7 +624,7 @@ module.exports =
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.Domain = exports.default = undefined;
+	exports.Client = exports.Domain = exports.default = undefined;
 	
 	var _DomainDrivenFullstackApplication = __webpack_require__(4);
 	
@@ -631,12 +632,17 @@ module.exports =
 	
 	var _strictduckDomainDrivenFullstack = __webpack_require__(5);
 	
+	var _domainDrivenReduxReact = __webpack_require__(8);
+	
+	var _domainDrivenReduxReact2 = _interopRequireDefault(_domainDrivenReduxReact);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = _DomainDrivenFullstackApplication2.default;
 	var implementation = _strictduckDomainDrivenFullstack.Domain.implementation;
 	var Domains = _strictduckDomainDrivenFullstack.Domain.Domains;
 	exports.Domain = implementation;
+	exports.Client = _domainDrivenReduxReact2.default;
 
 /***/ },
 /* 4 */
@@ -656,9 +662,9 @@ module.exports =
 	
 	var _domainDrivenExpress2 = _interopRequireDefault(_domainDrivenExpress);
 	
-	var _domainDrivenReduxReact = __webpack_require__(7);
+	var _server = __webpack_require__(7);
 	
-	var _domainDrivenReduxReact2 = _interopRequireDefault(_domainDrivenReduxReact);
+	var _server2 = _interopRequireDefault(_server);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -677,7 +683,7 @@ module.exports =
 	        var _ref$server = _ref.server;
 	        var server = _ref$server === undefined ? _domainDrivenExpress2.default : _ref$server;
 	        var _ref$client = _ref.client;
-	        var client = _ref$client === undefined ? _domainDrivenReduxReact2.default : _ref$client;
+	        var client = _ref$client === undefined ? _server2.default : _ref$client;
 	        var
 	        //Store=DDPouchDb,
 	        domains = _ref.domains;
@@ -706,6 +712,12 @@ module.exports =
 
 /***/ },
 /* 7 */
+/***/ function(module, exports) {
+
+	module.exports = require("domain-driven-redux-react/server");
+
+/***/ },
+/* 8 */
 /***/ function(module, exports) {
 
 	module.exports = require("domain-driven-redux-react");
