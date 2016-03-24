@@ -4,11 +4,12 @@ const DDReduxReact = ($ES.CONTEXT == 'NODE' ? require('domain-driven-redux-react
 
 export default class Bufflehead extends Fullstack {
     constructor({
-        server=DDExpress,
-        client=DDReduxReact,
+        server = DDExpress,
+        client = DDReduxReact,
         //Store=DDPouchDb,
-        domains
+        domains,
+        context = $ES.CONTEXT
     }){
-        super({ domains, server, client /*Store,*/ })
+        super({ context, domains, server, client /*Store,*/ })
     }
 }
