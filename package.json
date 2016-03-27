@@ -16,7 +16,7 @@
   "dependencies": {
     "domain-driven-express": "github:michaeljosephrosenthal/express-domain-driver",
     "domain-driven-redux-react": "github:michaeljosephrosenthal/redux-react-domain-driver",
-    "pouchdb-fullstack-store": "github:michaeljosephrosenthal/pouchdb-fullstack-store",
+    "domain-driven-pouchdb-persistence-plugin": "github:michaeljosephrosenthal/pouchdb-fullstack-store",
     "strictduck-domain-driven-fullstack": "github:strictduck/domain-driven-fullstack",
     "strictduck": "github:strictduck/strictduck"
   },
