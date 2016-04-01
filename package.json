@@ -11,10 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "domain-driven-express": "github:michaeljosephrosenthal/express-domain-driver",
-    "domain-driven-redux-react": "github:michaeljosephrosenthal/redux-react-domain-driver",
     "domain-driven-pouchdb-persistence-plugin": "github:michaeljosephrosenthal/pouchdb-fullstack-store",
-    "strictduck-domain-driven-fullstack": "github:strictduck/domain-driven-fullstack",
-    "strictduck": "github:strictduck/strictduck"
+    "domain-driven-redux-react": "github:michaeljosephrosenthal/redux-react-domain-driver",
+    "imports-loader": "^0.6.5",
+    "strictduck": "github:strictduck/strictduck",
+    "strictduck-domain-driven-fullstack": "github:strictduck/domain-driven-fullstack"
   },
   "devDependencies": {
     "polypacker": "michaeljosephrosenthal/polypacker"
