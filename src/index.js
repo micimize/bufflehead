@@ -7,5 +7,4 @@ import { Domain } from 'strictduck-domain-driven-fullstack'
 const {implementation, Domains} = Domain
 export { implementation as Domain }
 
-import { defaultDataFlows } from 'domain-driven-pouchdb-persistence-plugin/dist/for/browser'
-export { defaultDataFlows as defaultPersistenceDataFlows }
+export * as persister from 'domain-driven-pouchdb-persistence-plugin'
