@@ -5,7 +5,7 @@ function flattenForContext(obj, key, contexts=['server', 'client']){
     return Object.keys(obj)
         .filter(k => contexts.indexOf(k) < 0)
         .reduce((resp, k) => {
-            resp[k] = typeof(obj[k]) == 'object' ? flattenForContext(obj[k], key, contexts) : obj[k];
+            resp[k] = ((!Array.isArray(obj[k])) && typeof(obj[k]) == 'object') ? flattenForContext(obj[k], key, contexts) : obj[k];
             return resp
         }, {})
 }
