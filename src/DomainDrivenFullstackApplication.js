@@ -6,11 +6,7 @@ const DDExpress = (
        require('domain-driven-express/dist/for/browser')
 ).default
 
-const DDReduxReact = (
-    $ES.CONTEXT == 'NODE' ?
-        require('domain-driven-redux-react/dist/for/node') :
-        require('domain-driven-redux-react/dist/for/browser')
-).default
+import DDReduxReact from 'polypack!domain-driven-redux-react'
 
 const DDPouchDb = (
     $ES.CONTEXT == 'NODE' ?
