@@ -18,7 +18,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "bdd0f73823741652332f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a3dd88d30dc785d6c189"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -659,9 +659,9 @@ module.exports =
 	
 	var _strictduckDomainDrivenFullstack = __webpack_require__(5);
 	
-	var _domainDrivenPouchdbPersistencePlugin = __webpack_require__(40);
+	var _polypackDomainDrivenPouchdbPersistencePlugin = __webpack_require__(28);
 	
-	var _persister = _interopRequireWildcard(_domainDrivenPouchdbPersistencePlugin);
+	var _persister = _interopRequireWildcard(_polypackDomainDrivenPouchdbPersistencePlugin);
 	
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 	
@@ -740,7 +740,7 @@ module.exports =
 
 /***/ },
 /* 6 */
-[41, 7],
+[40, 7],
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1722,7 +1722,7 @@ module.exports =
 
 /***/ },
 /* 13 */
-[41, 14],
+[40, 14],
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -3437,7 +3437,7 @@ module.exports =
 
 /***/ },
 /* 28 */
-[41, 29],
+[40, 29],
 /* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -5312,19 +5312,11 @@ module.exports =
 
 /***/ },
 /* 40 */
-/***/ function(module, exports) {
-
-	module.exports = require("domain-driven-pouchdb-persistence-plugin");
-
-/***/ },
-/* 41 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	"use strict";
 	
-	module.exports = {
-	    default: __webpack_require__(__webpack_module_template_argument_0__) //polypacked by dist
-	};
+	module.exports = __webpack_require__(__webpack_module_template_argument_0__) //polypacked by dist;
 
 /***/ }
 /******/ ])));
