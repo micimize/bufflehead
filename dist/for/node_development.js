@@ -18,7 +18,7 @@ module.exports =
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a3dd88d30dc785d6c189"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "649b1aa5fa3c3af8647a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -653,13 +653,13 @@ module.exports =
 	
 	var _DomainDrivenFullstackApplication2 = _interopRequireDefault(_DomainDrivenFullstackApplication);
 	
-	var _settings2 = __webpack_require__(39);
+	var _settings2 = __webpack_require__(40);
 	
 	var _settings3 = _interopRequireDefault(_settings2);
 	
 	var _strictduckDomainDrivenFullstack = __webpack_require__(5);
 	
-	var _polypackDomainDrivenPouchdbPersistencePlugin = __webpack_require__(28);
+	var _polypackDomainDrivenPouchdbPersistencePlugin = __webpack_require__(29);
 	
 	var _persister = _interopRequireWildcard(_polypackDomainDrivenPouchdbPersistencePlugin);
 	
@@ -696,7 +696,7 @@ module.exports =
 	
 	var _polypackDomainDrivenReduxReact2 = _interopRequireDefault(_polypackDomainDrivenReduxReact);
 	
-	var _polypackDomainDrivenPouchdbPersistencePlugin = __webpack_require__(28);
+	var _polypackDomainDrivenPouchdbPersistencePlugin = __webpack_require__(29);
 	
 	var _polypackDomainDrivenPouchdbPersistencePlugin2 = _interopRequireDefault(_polypackDomainDrivenPouchdbPersistencePlugin);
 	
@@ -740,7 +740,7 @@ module.exports =
 
 /***/ },
 /* 6 */
-[40, 7],
+[41, 7],
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -775,7 +775,7 @@ module.exports =
 		/******/
 		/******/
 		/******/var hotApplyOnUpdate = true;
-		/******/var hotCurrentHash = "e78ae89de6c77e9c9e4f"; // eslint-disable-line no-unused-vars
+		/******/var hotCurrentHash = "132de5c6a21cd0485a6b"; // eslint-disable-line no-unused-vars
 		/******/var hotCurrentModuleData = {};
 		/******/var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 		/******/
@@ -1633,10 +1633,15 @@ module.exports =
 			});
 		}
 	
-		function routeBuilder(router, routes) {
-			var prefix = arguments.length <= 2 || arguments[2] === undefined ? '' : arguments[2];
+		function routeBuilder(_ref) {
+			var router = _ref.router;
+			var routes = _ref.routes;
+			var order = _ref.order;
+			var _ref$prefix = _ref.prefix;
+			var prefix = _ref$prefix === undefined ? '' : _ref$prefix;
 	
-			Object.keys(routes).forEach(function (endpoint) {
+			var keys = order || Object.keys(routes);
+			keys.forEach(function (endpoint) {
 				var _routes$endpoint = routes[endpoint];
 				var methods = _routes$endpoint.methods;
 				var handlers = _routes$endpoint.handlers;
@@ -1648,11 +1653,12 @@ module.exports =
 			return router;
 		};
 	
-		function domainRoutes(_ref) {
-			var prefix = _ref.prefix;
-			var routes = _ref.routes;
+		function domainRoutes(_ref2) {
+			var prefix = _ref2.prefix;
+			var routes = _ref2.routes;
+			var order = _ref2.order;
 	
-			return routeBuilder(_express2.default.Router(), routes, '/' + prefix);
+			return routeBuilder({ router: _express2.default.Router(), routes: routes, order: order, prefix: '/' + prefix });
 		}
 	
 		function genericMiddlewareFlattener(domains) {
@@ -1722,7 +1728,7 @@ module.exports =
 
 /***/ },
 /* 13 */
-[40, 14],
+[41, 14],
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -1757,7 +1763,7 @@ module.exports =
 		/******/
 		/******/
 		/******/var hotApplyOnUpdate = true;
-		/******/var hotCurrentHash = "752507ea8cee6ce98dcd"; // eslint-disable-line no-unused-vars
+		/******/var hotCurrentHash = "7cecfa19575f05d6dd04"; // eslint-disable-line no-unused-vars
 		/******/var hotCurrentModuleData = {};
 		/******/var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 		/******/
@@ -2523,7 +2529,7 @@ module.exports =
 			return obj && obj.__esModule ? obj : { default: obj };
 		}
 	
-		var _provider = (true ? __webpack_require__(23) : require('./render')).default;
+		var _provider = (true ? console.log('wat') || __webpack_require__(23) : require('./render')).default;
 	
 		exports.default = _strictduckDomainDrivenFullstack.reactiveClient.implement({
 			name: 'DomainDrivenReduxReactClient',
@@ -3191,6 +3197,17 @@ module.exports =
 		Object.defineProperty(exports, "__esModule", {
 			value: true
 		});
+	
+		var _extends = Object.assign || function (target) {
+			for (var i = 1; i < arguments.length; i++) {
+				var source = arguments[i];for (var key in source) {
+					if (Object.prototype.hasOwnProperty.call(source, key)) {
+						target[key] = source[key];
+					}
+				}
+			}return target;
+		};
+	
 		exports.default = serverDomain;
 	
 		var _webpack = __webpack_require__(24);
@@ -3201,19 +3218,23 @@ module.exports =
 	
 		var _path2 = _interopRequireDefault(_path);
 	
-		var _webpackDevMiddleware = __webpack_require__(26);
+		var _fs = __webpack_require__(26);
+	
+		var _fs2 = _interopRequireDefault(_fs);
+	
+		var _webpackDevMiddleware = __webpack_require__(27);
 	
 		var _webpackDevMiddleware2 = _interopRequireDefault(_webpackDevMiddleware);
 	
-		var _webpackHotMiddleware = __webpack_require__(27);
+		var _webpackHotMiddleware = __webpack_require__(28);
 	
 		var _webpackHotMiddleware2 = _interopRequireDefault(_webpackHotMiddleware);
 	
-		var _express = __webpack_require__(28);
+		var _express = __webpack_require__(29);
 	
 		var _express2 = _interopRequireDefault(_express);
 	
-		var _webpackConfig = __webpack_require__(29);
+		var _webpackConfig = __webpack_require__(30);
 	
 		var _webpackConfig2 = _interopRequireDefault(_webpackConfig);
 	
@@ -3225,17 +3246,30 @@ module.exports =
 	
 		function serverDomain() {
 			var compiler = (0, _webpack2.default)(_webpackConfig2.default);
+			if (false) {
+				compiler.run(function (err, stats) {
+					if (err) console.log('err', err);
+				});
+			}
 			return new _strictduckDomainDrivenFullstack.Domain.implementation({
 				name: '',
-				middleware: true ? [(0, _webpackDevMiddleware2.default)(compiler, { noInfo: true, publicPath: _webpackConfig2.default.output.publicPath }), (0, _webpackHotMiddleware2.default)(compiler), _express2.default.static('static')] : [_express2.default.static('static')],
-				routes: {
+				middleware: true ? [(0, _webpackDevMiddleware2.default)(compiler, { noInfo: true, publicPath: _webpackConfig2.default.output.publicPath }), (0, _webpackHotMiddleware2.default)(compiler), _express2.default.static('static')] : [],
+				routes: _extends({}, false ? {
+					'static/bundle.js': {
+						methods: ['get'],
+						handlers: [function (req, res, next) {
+							return res.sendFile(_path2.default.join(process.cwd(), 'dist/bundle.js'));
+						}]
+					}
+				} : {}, {
 					'*': {
 						methods: ['get'],
 						handlers: [function (req, res, next) {
 							return res.sendFile(_path2.default.join(process.cwd(), 'index.html'));
 						}]
 					}
-				}
+				}),
+				order: false ? ['static/bundle.js', '*'] : ['*']
 			});
 		}
 	
@@ -3272,11 +3306,18 @@ module.exports =
 	/* 28 */
 	/***/function (module, exports) {
 	
-		module.exports = __webpack_require__(12);
+		module.exports = __webpack_require__(28);
 	
 		/***/
 	},
 	/* 29 */
+	/***/function (module, exports) {
+	
+		module.exports = __webpack_require__(12);
+	
+		/***/
+	},
+	/* 30 */
 	/***/function (module, exports, __webpack_require__) {
 	
 		'use strict';
@@ -3288,13 +3329,28 @@ module.exports =
 			devtool: 'source-map',
 			context: process.cwd(),
 			debug: true,
-			entry: ['webpack-hot-middleware/client', './src/index'],
+			target: 'web',
+			entry: true ? ['webpack-hot-middleware/client', './src/index'] : ['./src/index'],
 			output: {
 				path: path.join(process.cwd(), "dist"),
 				filename: 'bundle.js',
 				publicPath: '/static/'
 			},
-			plugins: [new webpack.DefinePlugin({ $ES: { CONTEXT: JSON.stringify('BROWSER'), ENV: JSON.stringify('PRODUCTION') } }), new webpack.optimize.OccurenceOrderPlugin(), new webpack.HotModuleReplacementPlugin(), new webpack.NoErrorsPlugin()],
+			plugins: true ? [new webpack.DefinePlugin({ $ES: { CONTEXT: JSON.stringify('BROWSER'), ENV: JSON.stringify("DEVELOPMENT") } }), new webpack.optimize.OccurenceOrderPlugin(), new webpack.HotModuleReplacementPlugin(), new webpack.NoErrorsPlugin()] : [new webpack.DefinePlugin({ $ES: { CONTEXT: JSON.stringify('BROWSER'), ENV: JSON.stringify($ES.ENV) } }), new webpack.DefinePlugin({ "process.env": { NODE_ENV: '"production"' } }), new webpack.optimize.DedupePlugin(), new webpack.optimize.OccurenceOrderPlugin(), new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } })],
+			resolveLoader: {
+				fallback: path.join(process.cwd(), "node_modules"),
+				alias: { polypack: 'callback?polypack' }
+			},
+			callbackLoader: {
+				polypack: function polypack(mod) {
+					var compound_version = 'browser_' + "DEVELOPMENT".toLowerCase();
+					if (mod) {
+						return 'require("' + mod + '/dist/for/' + compound_version + '") //polypacked secondhand';
+					} else {
+						return 'require("./for/' + compound_version + '") //polypacked by dist';
+					}
+				}
+			},
 			module: {
 				loaders: [{
 					test: /\.js$|\.jsx$/,
@@ -3331,7 +3387,6 @@ module.exports =
 					react: path.join(process.cwd(), './node_modules/react')
 				}
 			},
-			resolveLoader: { fallback: path.join(process.cwd(), "node_modules") },
 			node: {
 				__dirname: true,
 				fs: 'empty'
@@ -3427,18 +3482,24 @@ module.exports =
 /* 26 */
 /***/ function(module, exports) {
 
-	module.exports = require("webpack-dev-middleware");
+	module.exports = require("fs");
 
 /***/ },
 /* 27 */
 /***/ function(module, exports) {
 
-	module.exports = require("webpack-hot-middleware");
+	module.exports = require("webpack-dev-middleware");
 
 /***/ },
 /* 28 */
-[40, 29],
+/***/ function(module, exports) {
+
+	module.exports = require("webpack-hot-middleware");
+
+/***/ },
 /* 29 */
+[41, 30],
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4849,21 +4910,21 @@ module.exports =
 	/* 12 */
 	/***/function (module, exports) {
 	
-		module.exports = __webpack_require__(32);
+		module.exports = __webpack_require__(33);
 	
 		/***/
 	},
 	/* 13 */
 	/***/function (module, exports) {
 	
-		module.exports = __webpack_require__(33);
+		module.exports = __webpack_require__(34);
 	
 		/***/
 	},
 	/* 14 */
 	/***/function (module, exports) {
 	
-		module.exports = __webpack_require__(34);
+		module.exports = __webpack_require__(35);
 	
 		/***/
 	},
@@ -4907,14 +4968,14 @@ module.exports =
 	/* 16 */
 	/***/function (module, exports) {
 	
-		module.exports = __webpack_require__(35);
+		module.exports = __webpack_require__(36);
 	
 		/***/
 	},
 	/* 17 */
 	/***/function (module, exports) {
 	
-		module.exports = __webpack_require__(36);
+		module.exports = __webpack_require__(37);
 	
 		/***/
 	},
@@ -5190,32 +5251,19 @@ module.exports =
 	/* 19 */
 	/***/function (module, exports) {
 	
-		module.exports = __webpack_require__(37);
+		module.exports = __webpack_require__(38);
 	
 		/***/
 	},
 	/* 20 */
 	/***/function (module, exports) {
 	
-		module.exports = __webpack_require__(38);
+		module.exports = __webpack_require__(39);
 	
 		/***/
 	}
 	/******/]);
 	//# sourceMappingURL=node_development.js.map
-
-/***/ },
-/* 30 */
-/***/ function(module, exports) {
-
-	function webpackContext(req) {
-		throw new Error("Cannot find module '" + req + "'.");
-	}
-	webpackContext.keys = function() { return []; };
-	webpackContext.resolve = webpackContext;
-	module.exports = webpackContext;
-	webpackContext.id = 30;
-
 
 /***/ },
 /* 31 */
@@ -5234,46 +5282,59 @@ module.exports =
 /* 32 */
 /***/ function(module, exports) {
 
-	module.exports = require("json-path");
+	function webpackContext(req) {
+		throw new Error("Cannot find module '" + req + "'.");
+	}
+	webpackContext.keys = function() { return []; };
+	webpackContext.resolve = webpackContext;
+	module.exports = webpackContext;
+	webpackContext.id = 32;
+
 
 /***/ },
 /* 33 */
 /***/ function(module, exports) {
 
-	module.exports = require("async-function-queue");
+	module.exports = require("json-path");
 
 /***/ },
 /* 34 */
 /***/ function(module, exports) {
 
-	module.exports = require("deep-equal");
+	module.exports = require("async-function-queue");
 
 /***/ },
 /* 35 */
 /***/ function(module, exports) {
 
-	module.exports = require("pouchdb");
+	module.exports = require("deep-equal");
 
 /***/ },
 /* 36 */
 /***/ function(module, exports) {
 
-	module.exports = require("pouchdb-authentication");
+	module.exports = require("pouchdb");
 
 /***/ },
 /* 37 */
 /***/ function(module, exports) {
 
-	module.exports = require("requisition");
+	module.exports = require("pouchdb-authentication");
 
 /***/ },
 /* 38 */
 /***/ function(module, exports) {
 
-	module.exports = require("child_process");
+	module.exports = require("requisition");
 
 /***/ },
 /* 39 */
+/***/ function(module, exports) {
+
+	module.exports = require("child_process");
+
+/***/ },
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5311,7 +5372,7 @@ module.exports =
 	}
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	"use strict";
