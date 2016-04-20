@@ -4,7 +4,7 @@
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
-    "dist":  "polypacker --preset FULLSTACK_COMPONENT",
+    "dist": "polypacker --preset FULLSTACK_COMPONENT",
     "watch": "polypacker --preset FULLSTACK_COMPONENT --watch"
   },
   "author": "Michael Joseph Rosenthal",
@@ -14,6 +14,7 @@
     "domain-driven-pouchdb-persistence-plugin": "github:michaeljosephrosenthal/pouchdb-fullstack-store",
     "domain-driven-redux-react": "github:michaeljosephrosenthal/redux-react-domain-driver",
     "imports-loader": "^0.6.5",
+    "nconf": "^0.8.4",
     "source-map-support": "^0.4.0",
     "strictduck": "github:strictduck/strictduck",
     "strictduck-domain-driven-fullstack": "github:strictduck/domain-driven-fullstack"
