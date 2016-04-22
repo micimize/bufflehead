@@ -13,7 +13,11 @@ function flattenForContext(original, key, contexts=['server', 'client']){
 
 let deriveSettingsFromEnv = ($ES.CONTEXT == 'NODE') ? require('./nodeSettings') : require('./browserSettings')
 
-export default function settings({literal={}, context=$ES.CONTEXT, fullstack=true, contextMap={NODE: 'server', BROWSER: 'client'}} = {}){
+export default function settings(literal, {
+    context=$ES.CONTEXT,
+    fullstack=true,
+    contextMap={NODE: 'server', BROWSER: 'client'}
+} = {}){
     let configuration = Object.assign(deriveSettingsFromEnv(), literal)
     return new Domain.implementation({
         name: 'settings',

@@ -1,6 +1,6 @@
 {
   "name": "bufflehead",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "",
   "main": "./dist/index.js",
   "scripts": {
@@ -8,18 +8,15 @@
     "watch": "polypacker --preset FULLSTACK_COMPONENT --watch"
   },
   "author": "Michael Joseph Rosenthal",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "domain-driven-express": "github:michaeljosephrosenthal/express-domain-driver",
-    "domain-driven-pouchdb-persistence-plugin": "github:michaeljosephrosenthal/pouchdb-fullstack-store",
-    "domain-driven-redux-react": "github:michaeljosephrosenthal/redux-react-domain-driver",
-    "imports-loader": "^0.6.5",
-    "nconf": "^0.8.4",
-    "source-map-support": "^0.4.0",
-    "strictduck": "github:strictduck/strictduck",
-    "strictduck-domain-driven-fullstack": "github:strictduck/domain-driven-fullstack"
+    "domain-driven-express": "0.1.2",
+    "domain-driven-pouchdb-persistence-plugin": "0.1.2",
+    "domain-driven-redux-react": "0.1.2",
+    "strictduck": "0.1.1",
+    "strictduck-domain-driven-fullstack": "0.1.1"
   },
   "devDependencies": {
-    "polypacker": "michaeljosephrosenthal/polypacker"
+    "polypacker": "0.1.2"
   }
 }
