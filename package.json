@@ -1,6 +1,6 @@
 {
   "name": "bufflehead",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "domain driven fullstack javascript framework",
   "main": "./dist/index.js",
   "scripts": {
@@ -11,8 +11,8 @@
   "license": "MIT",
   "dependencies": {
     "domain-driven-express": "0.1.2",
-    "domain-driven-pouchdb-persistence-plugin": "0.1.2",
-    "domain-driven-redux-react": "0.1.3",
+    "domain-driven-pouchdb-persistence-plugin": "0.1.3",
+    "domain-driven-redux-react": "0.1.4",
     "strictduck": "0.1.1",
     "strictduck-domain-driven-fullstack": "0.1.1"
   },
