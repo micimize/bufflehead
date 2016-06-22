@@ -27,7 +27,7 @@ const app = new bufflehead.default({
 app.main()
 ```
 
-This is possible all the business logic is expressed on the `Domain` level, which is then orchestrated by the various middlewares of the afformentioned domain-driven components. For an example, the domain expressed in [bufflehead-todos/src/todos/domain](https://github.com/strictduck/bufflehead-todos/blob/master/src/todos/domain.js) is roughly:
+This is possible because all the business logic is expressed on the `Domain` level, which is then orchestrated by the various middlewares of the afformentioned domain-driven components. For an example, the domain expressed in [bufflehead-todos/src/todos/domain](https://github.com/strictduck/bufflehead-todos/blob/master/src/todos/domain.js) is roughly:
 ```javascript
 new Domain({
     name: 'todos',
